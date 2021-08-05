@@ -13,16 +13,15 @@ class BerobatController extends Controller
     //
     public function index() {
         $berobat = Berobat::query()->with('pasien')->with(['dokter', 'dokter.poli'])->get();
-        $now = Carbon::now();
         $data = [];
         foreach ($berobat as $v) {
-            $bday = Carbon::parse($v->pasien->date);
+            $now = Carbon::now();
             $data[] = [
                 'id' => $v->id,
                 'tr_id' => 'TR00'.$v->id,
                 'pasien_id' => 'PS.00'.$v->pasien->id,
                 'pasien_name' => $v->pasien->name,
-                'usia' => $bday->diffInYears($now),
+                'usia' => Carbon::parse($v->pasien->date)->diffInYears($now),
                 'gender' => $v->pasien->gender,
                 'keluhan' => $v->keluhan,
                 'poli' => $v->dokter->poli->name,

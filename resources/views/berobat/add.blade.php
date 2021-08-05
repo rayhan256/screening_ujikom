@@ -54,16 +54,30 @@
                         </div>
                         <div class="form-group">
                             <label for="">Keluhan</label>
-                            <input type="text" name="keluhan" class="form-control">
+                            <input type="text" name="keluhan" class="form-control" id="keluhan">
                         </div>
                         <div class="form-group">
                             <label for="">Biaya Admin</label>
-                            <input type="text" name="adm" class="form-control">
+                            <input type="text" name="adm" class="form-control" id="adm">
                         </div>
-                        <input type="submit" value="Tambah Data Berobat" class="btn btn-primary">
+                        <div class="form-group row mx-3">
+                            <input type="submit" value="Tambah Data Berobat" class="btn btn-primary">
+                            <button type="button" class="btn btn-warning" id="clear">Clear</button>
+                        </div>
+
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        const clear = document.getElementById('clear')
+        const adm = document.getElementById('adm')
+        const keluhan = document.getElementById('keluhan')
+
+        clear.addEventListener('click', () => {
+            adm.value = ""
+            keluhan.value = ""
+        })
+    </script>
 @endsection

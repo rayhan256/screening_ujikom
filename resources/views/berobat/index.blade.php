@@ -35,7 +35,7 @@
                                     <td>{{ $i['tr_id'] }}</td>
                                     <td>{{ $i['pasien_id'] }}</td>
                                     <td>{{ $i['pasien_name'] }}</td>
-                                    <td>{{ $i['usia'] }}</td>
+                                    <td>{{ $i['usia'] }} Tahun</td>
                                     <td>{{ $i['gender'] }}</td>
                                     <td>{{ $i['keluhan'] }}</td>
                                     <td>{{ $i['poli'] }}</td>

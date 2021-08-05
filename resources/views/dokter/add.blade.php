@@ -23,7 +23,9 @@
                                 @endforeach
                             </select>
                         </div>
-                        <input type="submit" value="Tambah Dokter" class="btn btn-primary">
+                        <div class="row">
+                            <input type="submit" value="Tambah Dokter" class="btn btn-primary">
+                        </div>
                     </form>
                 </div>
             </div>
